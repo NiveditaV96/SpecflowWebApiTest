@@ -74,7 +74,7 @@
       <DependentUpon>TestFeat.feature</DependentUpon>
     </Compile>
     <Compile Include="TestFeatSteps.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="EmployeeControllerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

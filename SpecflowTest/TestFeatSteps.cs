@@ -18,17 +18,25 @@ namespace SpecflowTest
         public string Connect = @"Data Source=PCZ-EE210680\SQLEXPRESS;Initial Catalog=EmployeeDB;Integrated Security=True";
         EmployeeController instance = new EmployeeController(empList);
         List<EmployeeModel> data = new List<EmployeeModel>();
+
         [Given(@"I have list of all employees")]
         public void  GivenIHaveListOfAllEmployees()
         {
             data = instance.GatAllData();
+          
            
         }
-        
-        //[Then(@"the result should be list of all Emploees")]
+
+        [Then(@"the result should be list of all Emploees")]
         //public IEnumerable<EmployeeModel> ThenTheResultShouldBeListOfAllEmploees()
         //{
-           
+        //    EmployeeControllerTest ec = new EmployeeControllerTest();
+        //    ec.GetAllEmployees_ShouldReturnAllEmployeesList();
         //}
+        public void ThenTheResultShouldBeListOfAllEmploees()
+        {
+            EmployeeControllerTest ec = new EmployeeControllerTest();
+            ec.GetAllEmployees_ShouldReturnAllEmployeesList();
+        }
     }
 }

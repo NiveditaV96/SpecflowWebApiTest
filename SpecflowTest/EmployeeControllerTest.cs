@@ -7,7 +7,7 @@ using Specflow_app.Controllers;
 namespace SpecflowTest
 {
     [TestClass]
-    public class UnitTest1
+    public class EmployeeControllerTest
     {
         [TestMethod]
         public void GetAllEmployees_ShouldReturnAllEmployeesList()
@@ -15,7 +15,9 @@ namespace SpecflowTest
             List<EmployeeModel> listEmp = GetTestEmployees();
             var contr = new EmployeeController(listEmp);
             var result = contr.GatAllData() as List<EmployeeModel>;
-            Assert.AreEqual(listEmp, result);
+            Assert.AreEqual(listEmp.Count, result.Count);
+           // Assert.AreSame(listEmp, result);
+            
 
         }
 
